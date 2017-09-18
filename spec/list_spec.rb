@@ -9,14 +9,14 @@ end
 describe(List) do
   describe(".all") do
     it("starts off with no lists") do
-      expect(List.all()).to(eq([]))
+      expect(List.all).to(eq([]))
     end
   end
 
   describe("#name") do
     it("tells you its name") do
-      list = List.new({:name => "Epicodus stuff", :id => nil})
-      expect(list.name()).to(eq("Epicodus stuff"))
+      list = List.new({:name => "Epicodus stuff", :id => nil}) #hash attributes
+      expect(list.name).to(eq("Epicodus stuff")) #instance variable ...list instance
     end
   end
 
@@ -24,7 +24,7 @@ describe(List) do
     it("sets its ID when you save it") do
       list = List.new({:name => "Epicodus stuff", :id => nil})
       list.save()
-      expect(list.id()).to(be_an_instance_of(Fixnum))
+      expect(list.id).to(be_an_instance_of(Fixnum))
     end
   end
 
@@ -32,7 +32,7 @@ describe(List) do
     it("lets you save lists to the database") do
       list = List.new({:name => "Epicodus stuff", :id => nil})
       list.save()
-      expect(List.all()).to(eq([list]))
+      expect(List.all).to eq([list])
     end
   end
 
@@ -40,7 +40,7 @@ describe(List) do
     it("is the same list if it has the same name") do
       list1 = List.new({:name => "Epicodus stuff", :id => nil})
       list2 = List.new({:name => "Epicodus stuff", :id => nil})
-      expect(list1).to(eq(list2))
+      expect(list1).to eq(list2)
     end
   end
 end
