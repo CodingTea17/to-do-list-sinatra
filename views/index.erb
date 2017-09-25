@@ -20,7 +20,12 @@
                   <th><%= list.name %></th>
                   <th><a href="/lists/<%= list.id %>/view_taks"><button type=button class="btn btn-block btn-info">View</button></a></th>
                   <th><a href="/lists/<%= list.id %>/edit"><button type="button" class="btn btn-block btn-warning">Update</button></a></th>
-                  <th><a href="/lists/<%= list.id %>/delete"><button type="button" class="btn btn-block btn-danger">Delete</button></a></th>
+                  <th>
+                    <form action="/lists/<%= list.id %>/delete" method="post">
+                      <input name="_method" type="hidden" value="delete"/>
+                      <button type="submit" class="btn btn-block btn-danger">Delete</button>
+                    </form>
+                  </th>
                 </tr>
               <% end %>
             <% end %>

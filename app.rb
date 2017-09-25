@@ -34,6 +34,8 @@ patch '/lists/:id' do
   redirect('/')
 end
 
-delete 'lists/delete/:id' do
-
+delete '/lists/:id/delete' do
+  list = List.find(params['id'].to_i)
+  list.delete
+  redirect('/')
 end
