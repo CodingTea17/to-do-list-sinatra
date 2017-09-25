@@ -21,3 +21,19 @@ post '/lists/new' do
   list.save
   erb(:success)
 end
+
+get '/lists/:id/edit' do
+  @list = List.find(params['id'].to_i)
+  erb(:edit_list)
+end
+
+patch '/lists/:id' do
+  name = params['name']
+  @list = List.find(params['id'].to_i)
+  @list.update({:name => name})
+  redirect('/')
+end
+
+delete 'lists/delete/:id' do
+
+end
