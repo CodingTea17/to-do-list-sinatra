@@ -1,0 +1,27 @@
+<div class="row justify-content-md-center">
+  <div class="col-8">
+    <div id="my-card" class="card border-secondary mb-3">
+      <div id="my-card-body" class="card-body">
+        <table class="table ">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if @lists.any? %>
+              <% @lists.each_with_index do |list, i| %>
+                <tr>
+                  <th scope="row"><%= i+1 %></th>
+                  <th><%= list.name %></th>
+                </tr>
+              <% end %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer bg-transparent border-secondary"><a href="/lists/add_list"><button type="button" class="btn btn-success">Add a List</button></a></div>
+    </div>
+  </div>
+</div>

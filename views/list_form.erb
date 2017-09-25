@@ -1,0 +1,18 @@
+<div class="row justify-content-md-center">
+  <div class="col-8">
+    <div id="my-card" class="card border-secondary mb-3">
+      <div class="card-header bg-transparent border-secondary" style="font-size:24px;">Add a List</div>
+      <div class="card-body">
+        <form action="/lists/new" method="post">
+          <div class="form-group">
+            <label class="form-label" for="name">Give it a name!</label>
+            <input class="form-control" id="nameoflist" name="name" type="text" placeholder="List Name" autofocus required/>
+          </div>
+          <button type="submit" class="btn btn-danger">Add List</button>
+          <a href="/"><button type="button" class="btn btn-info">Cancel</button></a>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

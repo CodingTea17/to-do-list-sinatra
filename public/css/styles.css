@@ -1,0 +1,46 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-y: scroll;
+  background-color: #F5F5F5;
+}
+header {
+  height: 60px;
+}
+a:hover {
+  text-decoration: none;
+}
+label {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+tbody {
+  color: #000000;
+}
+.navbar-brand {
+  margin-left: 3em !important;
+  font-size: 2em;
+  font-family: 'Muli', sans-serif;
+  font-weight: 900;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    clear:both;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+}
+.bg-secondary {
+  background-color: #4A148C !important;
+}
+.border-secondary {
+  border-color: #4A148C !important;
+}
+#my-card {
+  margin-top: 4em;
+}
+#my-card-body {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
